@@ -7,14 +7,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Import data
-file_path = "/Users/manon/Downloads/Enquete Epidemio 2022 - CNEP RE_PONSES 2.xlsx"
+file_path = "/Users/manon/Downloads/Enquete Epidemio 2022 - CNEP RÉPONSES 2.xlsx"
 dataframe = pd.read_excel(file_path)
 total_rows = len(dataframe)
 
 # Plot distribution Age
 profile_characteristics = {
+    "Ville": ["Strasbourg", "Mulhouse"],
+    "Centre": ["Gare", "Centre commercial"],
     "Sexe": ["Homme", "Femme"],
-    "Fumeur": ["Oui", "Non"],
+    "Fumeur": ["Non", "Oui"],
     "Formation": ["Aucune", "CAP,BEP...", "Bac", "Bac à Bac+3", "Bac+4 et +"],
     "Profession": [
         "Agriculteurs",
