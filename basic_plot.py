@@ -233,6 +233,22 @@ total_rows = len(dataframe)
 # print(sum(tech_brossage.labels_values.values()))
 # plt.show()
 
+## Tech Brossage - valeurs ajustée pour total 100%
+ax = plt.subplot()
+tech_brossage = Boxplot("Technique de brossage pratiquée par les participants", ax)
+tech_brossage.labels_values = {
+    "Ne sais pas": 8.2,
+    "Horizontale": 17.6,
+    "Verticale": 35.7,
+    "Petits ronds": 17.8,
+    "Oscillo-rotatif": 20.7,
+}
+
+tech_brossage.plot_it()
+print("Technique brossage :", tech_brossage.labels_values)
+print(sum(tech_brossage.labels_values.values()))
+plt.show()
+
 ## Freq Brossage
 # ax = plt.subplot()
 # freq_brossage = Boxplot("Fréquence de brossages dentaires des participants", ax)
